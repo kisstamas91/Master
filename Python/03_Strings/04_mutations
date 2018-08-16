@@ -1,0 +1,15 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Strings - Mutations
+#https://www.hackerrank.com/challenges/python-mutations/problem
+#Level: easy
+#Points: 10
+
+def mutate_string(string, position, character):
+    res = string[:position] + character + string[position+1:]
+    return res
+    
+if __name__ == '__main__':
+    s = "abracadabra"
+    i, c = "5 k"
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
