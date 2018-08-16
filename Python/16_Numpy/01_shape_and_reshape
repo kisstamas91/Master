@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+#Hackkerrank - Python - Numpy - Shape and Reshape
+#https://www.hackerrank.com/challenges/np-shape-reshape/problem
+#Level: easy
+#Points: 20
+
+import numpy
+res = []
+dat=input().split()
+
+for k in range(len(dat)):
+    res.append(int(dat[k]))
+
+mod_res = numpy.asarray(res)
+fin = numpy.reshape(mod_res,(3,3))   
+print(fin)
