@@ -1,0 +1,15 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Basic Data Types - Tuples
+#https://www.hackerrank.com/challenges/python-tuples/problem
+#Level: easy
+#Points: 10
+
+res = []
+
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    A=list(set(integer_list))
+    for t in range(len(A)):
+        res.append(int(A[t]))
+    print(hash(tuple(res)))
