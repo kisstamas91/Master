@@ -1,0 +1,16 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Strings - Designer door mat
+#https://www.hackerrank.com/challenges/designer-door-mat/problem
+#Level: easy
+#Points: 10
+
+n, m = map(int,"9 27".split())
+j=int(int(n)/2 - 1)
+for i in range(n):
+    if(i < ((int(n)/2) - 1)):
+        print(((i*2+1)*".|.").center(m, "-"))
+    elif(i > (int(n)/2)):
+        print(((j*2+1)*".|.").center(m, "-"))
+        j = j - 1
+    else:
+        print("WELCOME".center(m, "-"))
