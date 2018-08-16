@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+#Hackkerrank - Python - Numpy - Transpose and flatten
+#https://www.hackerrank.com/challenges/np-transpose-and-flatten/problem
+#Level: easy
+#Points: 20
+
+import numpy
+n, m = map(int, input().split())
+array = numpy.array([input().strip().split() for _ in range(n)], int)
+print(array.T)
+print(array.flatten())
