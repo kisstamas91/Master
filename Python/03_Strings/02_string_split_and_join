@@ -1,0 +1,15 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Introduction - String split and join
+#https://www.hackerrank.com/challenges/python-string-split-and-join/problem
+#Level: easy
+#Points: 10
+
+def split_and_join(line):
+    a = line.split()
+    line = "-".join(a)
+    return(line)
+   
+if __name__ == '__main__':
+    line = "this is a string"
+    result = split_and_join(line)
+    print(result)
