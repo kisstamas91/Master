@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+#Hackkerrank - Python - Introduction - Print function
+#https://www.hackerrank.com/challenges/python-print/problem
+#Level: easy
+#Points: 20
+
+if __name__ == '__main__':
+    n = int(input())
+    for k in range(1, n + 1):
+        print(str(k), end="")
