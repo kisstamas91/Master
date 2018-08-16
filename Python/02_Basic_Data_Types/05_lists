@@ -1,0 +1,30 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Basic Data Types - Lists
+#https://www.hackerrank.com/challenges/python-lists/problem
+#Level: easy
+#Points: 10
+
+list = []
+res = []
+    
+if __name__ == '__main__':
+    N = int(input())
+    for i in range(N):
+        list.append(input().split())
+
+    
+    for i in range(len(list)):
+        if(list[i][0] == "insert"):
+            res.insert(int(list[i][1]), int(list[i][2]))
+        elif(list[i][0] == "print"):
+            print(res)
+        elif(list[i][0] == "remove"):
+            res.remove(int(list[i][1]))
+        elif(list[i][0] == "append"):
+            res.append(int(list[i][1]))
+        elif(list[i][0] == "sort"):
+            res.sort()
+        elif(list[i][0] == "pop"):
+            res.pop()
+        elif(list[i][0] == "reverse"):
+            res.reverse()
