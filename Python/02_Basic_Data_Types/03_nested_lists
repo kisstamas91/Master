@@ -1,0 +1,35 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Basic Data Types - Find the runner up score
+#https://www.hackerrank.com/challenges/swap-case/problem
+#Level: easy
+#Points: 10
+
+dat = []
+mod_dat = []
+res_dat = []
+
+if __name__ == '__main__':
+    min_val = 1000
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        dat.append([name, score])
+        if score <= min_val:
+            min_val = score
+            
+    for _ in range(len(dat)):
+        if(dat[_][1] != min_val):
+            mod_dat.append(dat[_])
+    min_val = 1000
+    
+    
+    for _ in range(len(mod_dat)):
+        if mod_dat[_][1] <= min_val:
+            min_val = mod_dat[_][1]
+    for _ in range(len(mod_dat)):
+        if(mod_dat[_][1] == min_val):
+            res_dat.append(mod_dat[_][0])
+    res_dat.sort()
+
+    for _ in range(len(res_dat)):
+        print(res_dat[_])
