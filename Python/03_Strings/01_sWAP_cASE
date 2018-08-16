@@ -1,0 +1,17 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Strings - sWAP cASE
+#https://www.hackerrank.com/challenges/swap-case/problem
+#Level: easy
+#Points: 10
+
+def swap_case(s):
+    res=""
+    for i in range(len(s.split())):
+        for k in range(len(s.split()[i])):
+            if (s.split()[i][k].islower()):
+                res = res + s.split()[i][k].upper()
+            else:
+                res = res + s.split()[i][k].lower()
+        res = res + " "
+    
+    return res
