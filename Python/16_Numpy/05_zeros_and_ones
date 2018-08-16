@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+#Hackkerrank - Python - Numpy - Zeros and ones
+#https://www.hackerrank.com/challenges/np-zeros-and-ones/problem
+#Level: easy
+#Points: 20
+
+import numpy
+num = tuple(map(int, input().split()))
+print(numpy.zeros((num), dtype = numpy.int))
+print(numpy.ones((num), dtype = numpy.int))
