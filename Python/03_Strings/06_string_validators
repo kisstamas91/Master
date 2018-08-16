@@ -1,0 +1,25 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Strings - String validators
+#https://www.hackerrank.com/challenges/string-validators/problem
+#Level: easy
+#Points: 10
+
+if __name__ == '__main__':
+    s = input()
+    prop = [False, False, False, False, False]    
+    for i in range(len(s)):
+        for j in range(len(prop)):
+            if prop[j] == False:
+                if s[i].isalnum() == True:
+                    prop[0] = True
+                if s[i].isalpha() == True:
+                    prop[1] = True
+                if s[i].isdigit() == True:
+                    prop[2] = True
+                if s[i].islower() == True:
+                    prop[3] = True
+                if s[i].isupper() == True:
+                    prop[4] = True
+    
+    for k in range(len(prop)):
+        print(prop[k])
