@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+#Hackkerrank - Python - Numpy - Arrays
+#https://www.hackerrank.com/challenges/np-arrays/problem
+#Level: easy
+#Points: 20
+
+import numpy
+
+def arrays(arr):
+    import numpy as np
+    res=[]
+    for k in range(len(arr)):
+        res.append(float(arr[k]))
+    res.reverse()
+    res = np.array(res)
+    return(res)
+    
+arr = "1 2 3 4 -8 -10".strip().split(' ')
+result = arrays(arr)
+print(result)
