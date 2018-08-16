@@ -1,0 +1,21 @@
+#!/usr/bin/env python 3
+#Hackkerrank - Python - Strings - Text wrap
+#https://www.hackerrank.com/challenges/text-wrap/problem
+#Level: easy
+#Points: 10
+
+def wrap(string, max_width):
+    res = []
+    if(len(string) % max_width != 0):
+        string = string + (len(string) % max_width) * " "
+    for k in range(0, len(string)-1, max_width):
+        res.append(string[k:k+max_width])
+    
+    for k in range(len(res)):
+        print(res[k])
+    return ""
+
+if __name__ == '__main__':
+    string, max_width = "ABCDEFGHIJKLIMNOQRSTUVWXYZ", int("4")
+    result = wrap(string, max_width)
+    print(result)
