@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+#Hackkerrank - Python - Numpy - Eye and Identity
+#https://www.hackerrank.com/challenges/np-eye-and-identity/problem
+#Level: easy
+#Points: 20
+
+import numpy
+num=tuple(map(int, "3 3".split()))
+print(str(numpy.eye(num[0], num[1], k = 0)).replace('1',' 1').replace('0',' 0'))
