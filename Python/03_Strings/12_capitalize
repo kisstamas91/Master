@@ -1,0 +1,45 @@
+#!/usr/bin/env python 
+#Hackkerrank - Python - Strings - Capitalize!
+#https://www.hackerrank.com/challenges/capitalize/problem
+#Level: easy
+#Points: 20
+
+def solve(s):
+    new = []
+    spc = []
+    res = ""
+    count = 0
+    for k in range(len(s) - 1):
+        if (s[k] == " ") and (s[k + 1] == " "):
+            count = count + 1
+        elif (s[k] == " ") and (s[k + 1] != " "):
+            count = count + 1
+            spc.append(count)
+            count = 0
+    spc.append(0)
+            
+    for k in range(len(s.split())):
+        if s.split()[k][0].isalpha() == True:
+            nl = chr(ord(s.split()[k][0])).upper()
+            new.append(nl + s.split()[k][1:len(s.split()[k])])
+        
+        else:
+            new.append(s.split()[k])
+
+    for k in range(len(new)):
+        if k != len(new):
+            res = res + new[k] + spc[k] * " "
+        else:
+            res = res + new[k]
+    return res
+    
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
